@@ -605,6 +605,7 @@ body::before {
 .sweep-active {
     position: relative;
     overflow: hidden;
+    border-radius: 0 !important;
 }
 
 .sweep-active::after {
