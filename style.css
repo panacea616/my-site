@@ -984,3 +984,42 @@ body::before {
     font-size: 30px;
   }
 }
+
+/* ===== ЛЁГКАЯ ОПТИМИЗАЦИЯ ДЛЯ ТЕЛЕФОНОВ (СОХРАНЯЕМ СТИЛЬ) ===== */
+@media (max-width: 768px) {
+  /* 1. Уменьшаем частоту анимации шума (было 0.8s, стало 1.5s) */
+  body::before {
+    animation-duration: 1.5s;
+  }
+  
+  /* 2. Уменьшаем интенсивность шума (было 0.08 opacity, стало 0.04) */
+  body::before {
+    opacity: 0.04;
+  }
+  
+  /* 3. Упрощаем градиент фона (убираем движение, оставляем статичный) */
+  body {
+    background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.08), transparent 40%),
+                radial-gradient(circle at 70% 70%, rgba(255, 255, 255, 0.04), transparent 50%),  
+                #0a0a0a;
+    background-size: auto;
+    animation: none;
+  }
+  
+  /* 4. Слегка уменьшаем blur в шапке и карточках (было 25px → 15px) */
+  .header {
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+  }
+  
+  .card, .project {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+  
+  /* 5. Анимация луча — уменьшаем количество кадров */
+  @keyframes sweepLight {
+    0% { left: -100%; }
+    100% { left: 100%; }
+  }
+}
