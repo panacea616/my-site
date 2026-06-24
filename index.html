@@ -1,31 +1,45 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Frontend разработчик — Климов Тимур</title>
-  <link rel="stylesheet" href="./style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-size='80' fill='%2344ff44'%3E%3C/text%3E%3C/svg%3E">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Климов Тимур — Frontend-разработчик</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Портфолио фронтенд-разработчика Тимура Климова. Проекты на HTML, CSS, JavaScript. Ищу стажировку и заказы." />
+  <meta name="keywords" content="frontend, разработчик, портфолио, HTML, CSS, JavaScript, веб-сайты" />
+  <meta name="author" content="Климов Тимур" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Климов Тимур — Frontend-разработчик" />
+  <meta property="og:description" content="Портфолио фронтенд-разработчика. Проекты, навыки, контакты." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://panacea616.github.io" />
+  <meta property="og:image" content="https://panacea616.github.io/img/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Preconnect для шрифтов -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-size='80' fill='%2344ff44'%3E%3C/text%3E%3C/svg%3E" />
 </head>
 
 <body>
-  <svg style="display:none;">
-    <filter id="noiseFilter">
-      <feTurbulence type="fractalNoise" baseFrequency="0.6" numOctaves="3" stitchTiles="stitch" />
-    </filter>
-  </svg>
+  <!-- Шумовой фильтр удалён для повышения производительности -->
 
   <header class="header">
     <div class="header_container">
       <div class="header_logo"><span>>.Klimov()</span></div>
-      <nav class="header_nav">
+      <nav class="header_nav" aria-label="Главная навигация">
         <ul class="nav_list">
-          <li><a href="#hero" class="nav_link">.is()</a></li>
-          <li><a href="#about" class="nav_link">.about()</a></li>
-          <li><a href="#projects" class="nav_link">.work()</a></li>
-          <li><a href="#contacts" class="nav_link">.contact()</a></li>
+          <li><a href="#hero" class="nav_link" aria-label="Перейти к секции .is()">.is()</a></li>
+          <li><a href="#about" class="nav_link" aria-label="Перейти к секции .about()">.about()</a></li>
+          <li><a href="#projects" class="nav_link" aria-label="Перейти к секции .work()">.work()</a></li>
+          <li><a href="#contacts" class="nav_link" aria-label="Перейти к секции .contact()">.contact()</a></li>
         </ul>
       </nav>
     </div>
@@ -39,8 +53,8 @@
         <h1 class="hero_title">Климов Тимур</h1>
         <p class="hero_text">Изучаю веб-разработку и создаю свои первые проекты на HTML, CSS и JavaScript</p>
         <div class="hero__buttons">
-          <a href="#projects" class="btn btn--primary">Посмотреть работы</a>
-          <a href="#contacts" class="btn btn--secondary">Связаться</a>
+          <a href="#projects" class="btn btn--primary" aria-label="Посмотреть мои работы">Посмотреть работы</a>
+          <a href="#contacts" class="btn btn--secondary" aria-label="Связаться со мной">Связаться</a>
         </div>
       </div>
       <div class="hero__visual">
@@ -62,7 +76,6 @@
     <section class="about" id="about">
       <h2 class="section__title">Frontend-разработчик</h2>
       <div class="about_container">
-        <div class="about_image">
         <div class="about_content">
           <p class="about_text">
             Привет, я Тимур — начинающий frontend-разработчик. Сейчас активно изучаю веб-разработку и применяю знания на практике, создавая небольшие проекты.
@@ -83,19 +96,19 @@
         <div class="skills__grid">
           <div class="card skills__card">
             <div class="card__icons">
-              <img src="img/html.png" alt="HTML">
-              <img src="img/css.png" alt="CSS">
+              <img src="img/html.png" alt="HTML" loading="lazy" decoding="async" />
+              <img src="img/css.png" alt="CSS" loading="lazy" decoding="async" />
             </div>
             <h3 class="card__title">HTML / CSS</h3>
             <p class="card__text">Адаптивная верстка (Flexbox, Grid)</p>
           </div>
           <div class="card skills__card">
-            <img src="img/js.png" alt="JavaScript">
+            <img src="img/js.png" alt="JavaScript" loading="lazy" decoding="async" />
             <h3 class="card__title">JavaScript</h3>
             <p class="card__text">Базовая работа с DOM и событиями</p>
           </div>
           <div class="card skills__card">
-            <img src="img/figma.png" alt="Figma">
+            <img src="img/figma.png" alt="Figma" loading="lazy" decoding="async" />
             <h3 class="card__title">Figma</h3>
             <p class="card__text">Могу сверстать простой макет</p>
           </div>
@@ -110,42 +123,40 @@
       <h2 class="section__title">Мои работы</h2>
       <div class="projects__grid">
 
-    <!-- КАРТОЧКА 1: Генератор паролей -->
-    <!-- КАРТОЧКА 1: Генератор паролей (полностью синяя, текст слева) -->
-<!-- КАРТОЧКА 1: Генератор паролей -->
-<div class="project-card project-card--generator" data-project="password-generator">
-    <div class="project-card__content">
-        <span class="project-card__emoji">🔐</span>
-        <h3 class="project-card__title">Генератор паролей</h3>
-        <p class="project-card__description">Создаёт надёжные пароли любой сложности</p>
-        <div class="project-card__tags">
-            <span class="project-card__tag">HTML</span>
-            <span class="project-card__tag">CSS</span>
-            <span class="project-card__tag">JavaScript</span>
+        <!-- КАРТОЧКА 1: Генератор паролей -->
+        <div class="project-card project-card--generator" data-project="password-generator">
+          <div class="project-card__content">
+            <span class="project-card__emoji">🔐</span>
+            <h3 class="project-card__title">Генератор паролей</h3>
+            <p class="project-card__description">Создаёт надёжные пароли любой сложности</p>
+            <div class="project-card__tags">
+              <span class="project-card__tag">HTML</span>
+              <span class="project-card__tag">CSS</span>
+              <span class="project-card__tag">JavaScript</span>
+            </div>
+          </div>
+          <div class="project-card__hover">
+            <span>Подробнее →</span>
+          </div>
         </div>
-    </div>
-    <div class="project-card__hover">
-        <span>Подробнее →</span>
-    </div>
-</div>
 
-    <!-- КАРТОЧКА 2: заглушка (однотонная, текст по центру) -->
-    <div class="project-card project-card--coming project-card--placeholder" style="display:flex; align-items:center; justify-content:center; text-align:center; padding:16px 20px; min-height:200px;">
-    <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; width:100%;">
-        <h3 class="project-card__title" style="font-size:18px; margin-bottom:4px; color:#fff;">Новый проект</h3>
-        <p class="project-card__description" style="font-size:13px; margin:0; color:#A1A1AA;">Скоро здесь появится что-то интересное</p>
-    </div>
-</div>
+        <!-- КАРТОЧКА 2: заглушка -->
+        <div class="project-card project-card--coming project-card--placeholder" style="display:flex; align-items:center; justify-content:center; text-align:center; padding:16px 20px; min-height:200px;">
+          <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; width:100%;">
+            <h3 class="project-card__title" style="font-size:18px; margin-bottom:4px; color:#fff;">Новый проект</h3>
+            <p class="project-card__description" style="font-size:13px; margin:0; color:#A1A1AA;">Скоро здесь появится что-то интересное</p>
+          </div>
+        </div>
 
-<!-- КАРТОЧКА 3: заглушка (аналогично) -->
-<div class="project-card project-card--coming project-card--placeholder" style="display:flex; align-items:center; justify-content:center; text-align:center; padding:16px 20px; min-height:200px;">
-    <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; width:100%;">
-        <h3 class="project-card__title" style="font-size:18px; margin-bottom:4px; color:#fff;">Новый проект</h3>
-        <p class="project-card__description" style="font-size:13px; margin:0; color:#A1A1AA;">Скоро здесь появится что-то интересное</p>
-    </div>
-</div>
+        <!-- КАРТОЧКА 3: заглушка -->
+        <div class="project-card project-card--coming project-card--placeholder" style="display:flex; align-items:center; justify-content:center; text-align:center; padding:16px 20px; min-height:200px;">
+          <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; width:100%;">
+            <h3 class="project-card__title" style="font-size:18px; margin-bottom:4px; color:#fff;">Новый проект</h3>
+            <p class="project-card__description" style="font-size:13px; margin:0; color:#A1A1AA;">Скоро здесь появится что-то интересное</p>
+          </div>
+        </div>
 
-</div>
+      </div>
     </div>
   </section>
 
@@ -156,7 +167,7 @@
       <p class="contacts__text">
         Ищу возможность получить первый опыт в веб-разработке — стажировку или небольшой проект. Буду рад обратной связи и любым задачам, которые помогут развиваться.
       </p>
-      <button type="button" class="btn btn--primary">Написать мне</button>
+      <button type="button" class="btn btn--primary" aria-label="Написать письмо">Написать мне</button>
     </div>
   </section>
 
@@ -172,35 +183,35 @@
         <div class="footer__col">
           <h3 class="footer__title">Навигация</h3>
           <ul class="footer__list">
-            <li><a href="#hero" class="footer__link">.is()</a></li>
-            <li><a href="#about" class="footer__link">.about()</a></li>
-            <li><a href="#projects" class="footer__link">.work()</a></li>
-            <li><a href="#contacts" class="footer__link">.contact()</a></li>
+            <li><a href="#hero" class="footer__link" aria-label="Перейти к .is()">.is()</a></li>
+            <li><a href="#about" class="footer__link" aria-label="Перейти к .about()">.about()</a></li>
+            <li><a href="#projects" class="footer__link" aria-label="Перейти к .work()">.work()</a></li>
+            <li><a href="#contacts" class="footer__link" aria-label="Перейти к .contact()">.contact()</a></li>
           </ul>
         </div>
         <div class="footer__col">
           <h3 class="footer__title">Контакты</h3>
           <ul class="footer__list">
             <li class="footer__contact-item">
-              <svg class="footer__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg class="footer__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <path d="M22 6L12 13L2 6M22 6H2M22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6M2 6L12 13L22 6" stroke="#A1A1AA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
               <a href="mailto:dieforthiss@gmail.com" class="footer__link">dieforthiss@gmail.com</a>
             </li>
             <li class="footer__contact-item">
-              <img src="./img/telegram.png" alt="Telegram" class="footer__icon-img" width="18" height="18">
+              <img src="./img/telegram.png" alt="Telegram" class="footer__icon-img" width="18" height="18" loading="lazy" decoding="async" />
               <a href="https://t.me/panacea616" class="footer__link" target="_blank" rel="noopener noreferrer">Telegram</a>
             </li>
             <li class="footer__contact-item">
-              <img src="./img/vk.png" alt="VK" class="footer__icon-img" width="18" height="18">
+              <img src="./img/vk.png" alt="VK" class="footer__icon-img" width="18" height="18" loading="lazy" decoding="async" />
               <a href="https://vk.com/panacea616" class="footer__link" target="_blank" rel="noopener noreferrer">Вконтакте</a>
             </li>
             <li class="footer__contact-item">
-    <svg class="footer__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.15 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.62.24 2.85.12 3.15.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" fill="#A1A1AA"/>
-    </svg>
-    <a href="https://github.com/panacea616" class="footer__link" target="_blank" rel="noopener noreferrer">GitHub</a>
-</li>
+              <svg class="footer__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.15 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.62.24 2.85.12 3.15.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" fill="#A1A1AA"/>
+              </svg>
+              <a href="https://github.com/panacea616" class="footer__link" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -211,13 +222,14 @@
   <div class="project-modal" id="projectModal">
     <div class="project-modal__overlay"></div>
     <div class="project-modal__window">
-      <button class="project-modal__close" id="modalClose">✕</button>
+      <button class="project-modal__close" id="modalClose" aria-label="Закрыть модальное окно">✕</button>
       <div class="project-modal__content" id="modalContent">
         <!-- сюда JS подставит данные -->
       </div>
     </div>
   </div>
 
-  <script src="./script1.js"></script>
+  <!-- Скрипт загружается с атрибутом defer для неблокирующей загрузки -->
+  <script src="./script1.js" defer></script>
 </body>
 </html>
